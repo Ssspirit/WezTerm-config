@@ -21,7 +21,7 @@ local config = {
 
 -- 判断操作系统为Windows
 if package.config:sub(1,1) == '\\' then
-    config.default_prog = {'pwsh.exe'}
+    config.default_prog = {'C:/Program Files/Git/bin/bash.exe', '-i', '-l'}
 end
 
 return config
