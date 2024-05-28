@@ -17,6 +17,10 @@ local config = {
         top = 20,
         bottom = 5,
     },
+
+	-- 默认大小(24, 80)
+	initial_cols = 100,
+	initial_rows = 30,
 }
 
 -- 判断操作系统为Windows
