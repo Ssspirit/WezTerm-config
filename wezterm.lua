@@ -23,6 +23,9 @@ local config = {
 	initial_rows = 30,
 }
 
+-- 关闭时不进行确认
+config.window_close_confirmation = "NeverPrompt"
+
 -- 判断操作系统为Windows
 if package.config:sub(1,1) == '\\' then
     config.default_prog = {'C:/Program Files/Git/bin/bash.exe', '-i', '-l'}
