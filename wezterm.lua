@@ -21,10 +21,22 @@ local config = {
 	-- 默认大小(24, 80)
 	initial_cols = 100,
 	initial_rows = 30,
+
 }
 
 -- 关闭时不进行确认
-config.window_close_confirmation = "NeverPrompt"
+-- 对快捷键无效
+-- config.window_close_confirmation = "NeverPrompt"
+
+-- 关闭时不进行确认
+config.keys = {
+  	{
+		key = 'w',
+		mods = 'SHIFT|CTRL',
+		action = wezterm.action.CloseCurrentTab { confirm = false },
+	},
+}
+
 
 -- 判断操作系统为Windows
 if package.config:sub(1,1) == '\\' then
