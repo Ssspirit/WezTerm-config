@@ -7,7 +7,7 @@ local config = {
     use_fancy_tab_bar = false,
     hide_tab_bar_if_only_one_tab = false,
     window_decorations = "RESIZE",
-    show_new_tab_button_in_tab_bar = false,
+    show_new_tab_button_in_tab_bar = true,
     window_background_opacity = 0.9,
     text_background_opacity = 0.9,
     adjust_window_size_when_changing_font_size = false,
@@ -39,8 +39,40 @@ config.keys = {
 
 
 -- 判断操作系统为Windows
-if package.config:sub(1,1) == '\\' then
-    config.default_prog = {'C:/Program Files/Git/bin/bash.exe', '-i', '-l'}
+-- if package.config:sub(1,1) == '\\' then
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+    config.default_prog = {'pwsh.exe'}
+
+	config.launch_menu = {
+		{
+			label = 'pwsh',
+			args = {'pwsh.exe'},
+		},
+		{
+			label = 'powershell',
+			args = {'powershell.exe'},
+		},
+		{
+			label = 'cmd',
+			args = {'cmd.exe'},
+		},
+		{
+			label = 'bash',
+			args = {'C:/Program Files/Git/bin/bash.exe', '-i', '-l'},
+		},
+		{
+			label = 'zsh',
+			args = {'C:/Program Files/Git/usr/bin/zsh.exe', '-i', '-l'},
+		},
+		{
+			label = 'VM-Ubuntu24',
+			args = {'ssh', 'vm-ubuntu24'},
+		},
+		{
+			label = 'VM-Ubuntu22',
+			args = {'ssh', 'vm-ubuntu22'},
+		},
+	}
 end
 
 return config
