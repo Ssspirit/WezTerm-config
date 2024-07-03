@@ -65,6 +65,10 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 			args = {'C:/Program Files/Git/usr/bin/zsh.exe', '-i', '-l'},
 		},
 		{
+			label = 'wsl-ubuntu22',
+			args = {'wsl.exe', '--distribution', 'Ubuntu-22.04', '--user', 'spirit', '--cd', '~'},
+		},
+		{
 			label = 'VM-Ubuntu24',
 			args = {'ssh', 'vm-ubuntu24'},
 		},
