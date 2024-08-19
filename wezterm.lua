@@ -76,6 +76,10 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 			label = 'VM-Ubuntu22',
 			args = {'ssh', 'vm-ubuntu22'},
 		},
+		{
+			label = '10s-Termux',
+			args = {'ssh', '10s-termux'},
+		},
 	}
 end
 
