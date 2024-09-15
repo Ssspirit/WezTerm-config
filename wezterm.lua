@@ -69,6 +69,10 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 			args = {'wsl.exe', '--distribution', 'Ubuntu-22.04', '--user', 'spirit', '--cd', '~'},
 		},
 		{
+			label = 'VM-Debian12',
+			args = {'ssh', 'vm-debian12'},
+		},
+		{
 			label = 'VM-Ubuntu24',
 			args = {'ssh', 'vm-ubuntu24'},
 		},
