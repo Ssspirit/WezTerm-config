@@ -2,9 +2,11 @@ local wezterm = require("wezterm")
 local config = {
     font_size = 13,
     font = wezterm.font("FiraCode Nerd Font", {weight = "Regular" }),
-    color_scheme = "Catppuccin Mocha",
-
+--    color_scheme = "Catppuccin Mocha",
+    color_scheme = 'Dracula (Official)',
+    tab_bar_at_bottom = true,
     use_fancy_tab_bar = false,
+
     hide_tab_bar_if_only_one_tab = false,
     window_decorations = "RESIZE",
     show_new_tab_button_in_tab_bar = true,
