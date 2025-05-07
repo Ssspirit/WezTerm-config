@@ -63,20 +63,20 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 			args = {'C:/Program Files/Git/bin/bash.exe', '-i', '-l'},
 		},
 		{
-			label = 'zsh',
-			args = {'C:/Program Files/Git/usr/bin/zsh.exe', '-i', '-l'},
-		},
-		{
 			label = 'wsl-ubuntu22',
 			args = {'wsl.exe', '--distribution', 'Ubuntu-22.04', '--user', 'spirit', '--cd', '~'},
 		},
 		{
-			label = 'VM-Debian12',
-			args = {'ssh', 'vm-debian12'},
+			label = 'wsl-ubuntu24',
+			args = {'wsl.exe', '--distribution', 'Ubuntu-24.04', '--user', 'spirit', '--cd', '~'},
 		},
 		{
-			label = 'VM-Ubuntu24',
-			args = {'ssh', 'vm-ubuntu24'},
+			label = 'GXDE-e450',
+			args = {'ssh', 'gxde-e450'},
+		},
+		{
+			label = 'aliyun-ubuntu24',
+			args = {'ssh', 'aliyun-ubuntu24'},
 		},
 		{
 			label = '10s-Termux',
