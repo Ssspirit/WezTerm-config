@@ -59,8 +59,8 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 			args = {'cmd.exe'},
 		},
 		{
-			label = 'bash',
-			args = {'C:/Program Files/Git/bin/bash.exe', '-i', '-l'},
+			label = 'msys2',
+			args = {'msys2_shell.cmd', '-defterm', '-no-start', '-use-full-path', '-here', '-mingw64'}
 		},
 		{
 			label = 'wsl-ubuntu22',
